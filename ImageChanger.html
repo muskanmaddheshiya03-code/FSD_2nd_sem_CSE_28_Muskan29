@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    
+    .alt-image {
+      content: url("https://png.pngtree.com/thumb_back/fw800/background/20241029/pngtree-spiral-galaxy-in-space-image_16378752.jpg");
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Switcher</h1>
+  <img id="myImage" 
+       src="https://th.bing.com/th/id/R.b47170a64c1ac2dbae4c9d74c72c8504?rik=t3X595Ok58zkag&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fvybsM9v.jpg&ehk=nx%2fk9njL5oZsIGZoggOh3n5WYlShJuhlD4DeU%2b3U3Ow%3d&risl=&pid=ImgRaw&r=0"  
+       alt="Image 1">
+
+  <br><br>
+  <button id="changeImageBtn"> Image Switcher</button>
+
+  <script>
+    const changeImageBtn = document.getElementById('changeImageBtn');
+    const myImage = document.getElementById('myImage');
+
+    changeImageBtn.addEventListener('click', () => {
+      
+      myImage.classList.toggle("alt-image");
+    });
+  </script>
+</body>
+</html>
