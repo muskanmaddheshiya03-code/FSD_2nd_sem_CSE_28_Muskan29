@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+</head>
+<body>
+    
+    <h2>Student Attendance</h2>
+
+    <p class="student">Rahul - Absent❌</p>
+    <p class="student">Priya - Absent❌</p>
+    <p class="student">Aman - Absent❌</p>
+
+    <button onclick="markPresent()">Mark All Present</button>
+
+    <script>
+
+        function markPresent(){
+
+            let students = document.getElementsByClassName("student");
+
+            for (let i = 0; i < students.length; i++) {
+                students[i].innerText = "Present✅";
+                students[i].style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>
